@@ -1,0 +1,86 @@
+:root {
+	--backgroundImage: none;
+}
+
+body {
+	background: #a7a7a7;
+	padding: 0;
+	margin: 0;
+}
+
+.header-image {
+	display: block;
+	width: 100%;
+}
+
+.ripped-paper {
+	background: white;
+	padding: 20px 0;
+	position: relative;
+}
+
+.content {
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-size: 18px;
+}
+
+.ripped-paper::after,
+.ripped-paper::before {
+	content: "";
+	position: absolute;
+	height: 20px;
+	width: 100%;
+	left: 0;
+	background-image: var(--backgroundImage);
+	background-size: auto 4200%;
+	background-position: bottom;
+	z-index: 1;
+	display: none;
+}
+
+.ripped-paper[data-paper-bottom]::after {
+	top: 100%;
+	display: block;
+}
+
+.ripped-paper[data-paper-top]::before {
+	bottom: 100%;
+	display: block;
+	transform: rotate(180deg);
+}
+
+.ripped-paper + .ripped-paper {
+	padding-top: 40px;
+}
+
+.white {
+	background: white;
+}
+
+.green {
+	background: #98C987;
+}
+
+.blue {
+	background: #74BEBD;
+}
+
+.beige {
+	background-color: #E8D8C2;
+}
+
+.grass {
+	width: 100%;
+	display: block;
+}
+
+.pb-0 {
+	padding-bottom: 0;
+}
