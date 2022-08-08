@@ -45,12 +45,12 @@ body {
 	display: none;
 }
 
-.ripped-paper[data-paper-bottom]::after {
+.ripped-paper.ripped-bottom::after {
 	top: 100%;
 	display: block;
 }
 
-.ripped-paper[data-paper-top]::before {
+.ripped-paper.ripped-top::before {
 	bottom: 100%;
 	display: block;
 	transform: rotate(180deg);
